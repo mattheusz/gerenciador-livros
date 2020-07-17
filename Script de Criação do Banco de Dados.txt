@@ -1,4 +1,5 @@
 -- script de criação do banco
+nome do banco: bd_trabalhojava
 
 create table Livro(
     id_livro integer(4) not null primary key AUTO_INCREMENT,

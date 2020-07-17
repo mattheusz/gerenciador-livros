@@ -1,0 +1,38 @@
+-- script de criação do banco
+
+create table Livro(
+    id_livro integer(4) not null primary key AUTO_INCREMENT,
+    foto varchar(80),
+    titulo varchar(80) not null,  
+    descricao varchar(200),
+    autor varchar(80),
+    editora varchar(80),
+    isbn varchar (13),   
+paginas numeric(4),
+    pag_lidas numeric(4),
+    adquirido varchar(5));
+
+
+
+alter table Livro
+  add constraint Livro_ibns_UK
+  unique key (isbn);
+
+
+insert into Livro (id_livro, foto, titulo, descricao, autor, editora, isbn, paginas, pag_lidas, adquirido) 
+values(1,'.\\Fotos\\Harry Potter e a Pedra Filosofal.jpg', 'Harry Potter e a Pedra Filosofal', 'Um garoto bruxo que vai para uma escola de Magias','J.K.Rowling' ,'Rocco', '9788532511010',253,0,'SIM')
+
+insert into Livro (id_livro, foto, titulo, descricao, autor, editora, isbn, paginas, pag_lidas, adquirido) 
+values(2,'.\\Fotos\\Senhor dos Anéis Sociedade do Anel.jpg', 'Senhor dos Anéis Sociedade do Anel', 'História de Hobbit que tem a missão de destruir um anél','J.R.R. Tolkien' ,'Allen & Unwin', '9788533613379',464,100,'SIM')
+
+
+insert into Livro (id_livro, foto, titulo, descricao, autor, editora, isbn, paginas, pag_lidas, adquirido) 
+values(3,'.\\Fotos\\Guerra Civil.png', 'Marvel Guerra Civil', 'História da maior batalha entre heróis do Universo Marvel','Stuart Moore' ,'Novo século', '9788542804126',398,10,'NÃO')
+
+insert into Livro (id_livro, foto, titulo, descricao, autor, editora, isbn, paginas, pag_lidas, adquirido) 
+values(4,'.\\Fotos\\Cinquenta Tons de Cinza.jpg', 'Cinquenta Tons de Cinza', 'Quando Anastasia Steele entrevista o jovem empresário Christian Grey, descobre nele um homem atraente, brilhante e profundamente dominador.','E.L.James' ,'Intrinseca', '9788580572186',480,0,'NÃO')
+
+
+insert into Livro (id_livro, foto, titulo, descricao, autor, editora, isbn, paginas, pag_lidas, adquirido) 
+values(5,'.\\Fotos\\O Homem Mais Inteligente da História.jpg', 'O homem mais inteligente da história', 'O homem mais inteligente da história” é fruto de 15 anos de estudos e pesquisas. Considerado por Augusto Cury a obra mais importante de sua carreira, este é o primeiro volume de uma coleção','Augusto Cury' ,'Sextante/Gmt', '9788543104355',272,272,'SIM')
+
